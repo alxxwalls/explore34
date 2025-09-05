@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>exthirtyfour — thanks</title>
+  <meta name="description" content="Thanks for signing up." />
+
+  <style>
+    :root{
+      --bg-image: url('https://images.unsplash.com/photo-1615496740873-503e1902be5f?q=80&w=1600&auto=format&fit=crop');
+      --bg-color:#0a0f14;
+      --fg:#e9eef2;
+      --muted:#a9b6c2;
+      --panel:rgba(10,15,20,0.55);
+      --border:rgba(255,255,255,0.08);
+      --brand:#a9e6da;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;
+      color:var(--fg); background:var(--bg-color);
+      min-height:100dvh;
+    }
+    .bg{position:fixed;inset:0;z-index:-1;background:var(--bg-image) center/cover no-repeat;filter:saturate(1.05) contrast(1.05);}
+    .veil{position:fixed;inset:0;z-index:-1;background:rgba(0,0,0,.55);}
+    .wrap{display:grid;place-items:center;min-height:100dvh;padding:32px;}
+    .card{
+      width:100%;max-width:560px;
+      background:var(--panel);backdrop-filter:blur(10px);
+      border:1px solid var(--border);border-radius:20px;padding:28px;text-align:center;
+    }
+    .brand{font-weight:700;letter-spacing:.3px;color:var(--fg);text-decoration:none;}
+    h1{font-size:clamp(28px,4.5vw,40px);margin:14px 0 8px;}
+    p{color:var(--muted);margin:0 0 20px;font-size:16px;}
+    a.btn{
+      display:inline-block;width:100%;padding:14px;border-radius:12px;
+      border:1px solid var(--border);background:var(--brand);
+      color:#0b1218;font-weight:700;text-decoration:none;
+    }
+    a.btn:hover{opacity:.95;}
+    .foot{margin-top:18px;display:flex;justify-content:center;gap:12px;font-size:14px;color:var(--muted);}
+    .foot a{color:var(--muted);text-decoration:none;border-bottom:1px dashed rgba(255,255,255,.2);}
+  </style>
+</head>
+<body>
+  <div class="bg" aria-hidden="true"></div>
+  <div class="veil" aria-hidden="true"></div>
+
+  <main class="wrap">
+    <section class="card">
+      <a href="/" class="brand">exthirtyfour</a>
+      <h1>thank you ✳</h1>
+      <p>You’re on the list. We’ll let you know when we’re ready.</p>
+      <a href="/" class="btn">Back to home</a>
+
+      <div class="foot">
+        <a href="https://instagram.com/exthirtyfour" target="_blank">Instagram</a>
+        <a href="mailto:hello@exthirtyfour.com">Contact</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
