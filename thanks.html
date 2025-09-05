@@ -1,8 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-gb">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <title>exthirtyfour — thanks</title>
   <meta name="description" content="Thanks for signing up." />
 
@@ -16,6 +17,8 @@
       --border:rgba(255,255,255,0.08);
       --brand:#a9e6da;
     }
+	
+		.logo-img { height:70px; width:auto; display:block; margin-bottom: 5%; }
 
     *{box-sizing:border-box}
     html,body{height:100%}
@@ -28,9 +31,10 @@
     .veil{position:fixed;inset:0;z-index:-1;background:rgba(0,0,0,.55);}
     .wrap{display:grid;place-items:center;min-height:100dvh;padding:32px;}
     .card{
-      width:100%;max-width:560px;
+      width:100%;max-width:620px;
       background:var(--panel);backdrop-filter:blur(10px);
-      border:1px solid var(--border);border-radius:20px;padding:28px;text-align:center;
+      border:1px solid var(--border);border-radius:10px;padding:30px;
+	  text-align: center;
     }
     .brand{font-weight:700;letter-spacing:.3px;color:var(--fg);text-decoration:none;}
     h1{font-size:clamp(28px,4.5vw,40px);margin:14px 0 8px;}
@@ -51,16 +55,32 @@
 
   <main class="wrap">
     <section class="card">
-      <a href="/" class="brand">exthirtyfour</a>
+      <a href="/" class="brand">
+  <img src="exlogo.svg" alt="exthirtyfour" class="logo-img">
+</a>
       <h1>thank you ✳</h1>
       <p>You’re on the list. We’ll let you know when we’re ready.</p>
       <a href="/" class="btn">Back to home</a>
 
       <div class="foot">
-        <a href="https://instagram.com/exthirtyfour" target="_blank">Instagram</a>
-        <a href="mailto:hello@exthirtyfour.com">Contact</a>
+        <span><a href="#" target="_blank">Instagram</a></span>
+		<span><a href="#" target="_blank">Facebook</a></span>
+		<span><a href="#" target="_blank">TikTok</a></span>
+		<span><a href="#" target="_blank">Linkedin</a></span>
+		</br>
+        <span><a href="mailto:contact@exthirtyfour.co.uk">Contact</a></span>
+		<span><a href="https://lekker.markeintg">Designed By Lekker</a></span>
       </div>
     </section>
   </main>
 </body>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QYSRPVSJ4T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QYSRPVSJ4T');
+</script>
 </html>
