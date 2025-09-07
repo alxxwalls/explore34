@@ -41,15 +41,26 @@
 
 
     *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;
-      color:var(--fg); background:var(--bg-color);
-      min-height:100dvh;
-    }
+    html, body { height: 100%; overflow-x: hidden; }
+
+    body { 
+  margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;
+  color:var(--fg); background:var(--bg-color);
+  min-height: 100svh;
+  background: var(--bg-color);
+}
+
     .bg{position:fixed;inset:0;z-index:-1;background:var(--bg-image) center/cover no-repeat;filter:saturate(1.05) contrast(1.05);}
     .veil{position:fixed;inset:0;z-index:-1;background:rgba(0,0,0,.55);}
-    .wrap{display:grid;place-items:center;min-height:100dvh;padding:20px;}
+    .wrap{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100svh;
+  padding: clamp(16px, 4vw, 32px);
+  padding-top: max(clamp(16px, 4vw, 32px), env(safe-area-inset-top));
+  padding-bottom: max(clamp(16px, 4vw, 32px), env(safe-area-inset-bottom));
+}
     .card{
       width:100%;max-width:620px;
       background:var(--panel);backdrop-filter:blur(10px);
@@ -76,6 +87,12 @@
     .foot{margin-top:18px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:14px;color:var(--muted);}
     .foot a{color:var(--muted);text-decoration:none;border-bottom:1px dashed rgba(255,255,255,.2);}
     .hp{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;}
+	
+	/* Fallbacks for older browsers */
+@supports not (min-height: 100svh) {
+  body, .wrap { min-height: 100vh; }
+}
+	
   </style>
 </head>
 
